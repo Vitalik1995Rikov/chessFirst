@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Board } from "./models/Board";
 import BoardComponent from "./components/BoardComponents";
 
+import './App.css'
+
 const App = () => {
 
     const [board, setBoard] = useState(new Board());
@@ -18,7 +20,10 @@ const App = () => {
     }
 
     return (
-        <BoardComponent board={board} setBoard={setBoard}/>
+        <div className="app">
+            <BoardComponent board={board} setBoard={setBoard}/>
+        </div>
+        
     )
 }
 
